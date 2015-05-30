@@ -5,4 +5,8 @@ set(CMAKE_CXX_FLAGS "-g -Wall -Werror -pthread")
 find_package(Threads REQUIRED)
 
 add_executable(philosophers philosophers.cpp)
-set_property(TARGET philosophers PROPERTY CXX_STANDARD 11)
+add_executable(readers_writers readers_writers.cpp)
+set_property(TARGET
+	philosophers
+	readers_writers
+PROPERTY CXX_STANDARD 11)
